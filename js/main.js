@@ -52,14 +52,17 @@ const handicraftWebsites = [
     }
 ];
 
-// Initialize website cards
-function initializeWebsiteCards() {
-    const exploreBtn = document.querySelector('.hero-section .btn-primary');
-    exploreBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        showWebsiteCollection();
-    });
-}
+// Initialize when DOM is loaded
+document.addEventListener('DOMContentLoaded', function() {
+    // Find the explore collection button
+    const exploreBtn = document.querySelector('.btn-lg');
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            showWebsiteCollection();
+        });
+    }
+});
 
 // Show website collection modal with animation
 function showWebsiteCollection() {
@@ -101,15 +104,22 @@ function showWebsiteCollection() {
         }
     });
 
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && modal.style.display === 'block') {
+            closeModal(modal);
+        }
+    });
+
     // Prevent scrolling of background
     document.body.style.overflow = 'hidden';
     
     // Show modal with animation
     modal.style.display = 'block';
-    setTimeout(() => {
+    requestAnimationFrame(() => {
         modal.classList.add('show');
         modal.querySelector('.website-modal-content').style.opacity = '1';
-    }, 10);
+    });
 }
 
 // Close modal with animation
@@ -121,11 +131,6 @@ function closeModal(modal) {
         document.body.style.overflow = '';
     }, 300);
 }
-
-// Initialize when DOM is loaded
-document.addEventListener('DOMContentLoaded', function() {
-    initializeWebsiteCards();
-});
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
