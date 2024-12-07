@@ -583,7 +583,86 @@ body {
     font-size: 1rem !important;
 }
 
-/* Responsive adjustments */
+/* Search Results Page Styles */
+.search-results-section {
+    padding: 3rem 0;
+    min-height: calc(100vh - 300px);
+    background: linear-gradient(135deg, var(--background-color), rgba(253, 245, 230, 0.7));
+}
+
+.search-results-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(139, 69, 19, 0.08);
+}
+
+/* Google CSE Results Page Overrides */
+.search-results-container .gsc-control-cse {
+    padding: 0 !important;
+    border: none !important;
+    background: transparent !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.search-results-container .gsc-result {
+    padding: 1.5rem !important;
+    margin-bottom: 1rem !important;
+    border-radius: 10px !important;
+    transition: all 0.3s ease !important;
+    border: 1px solid rgba(139, 69, 19, 0.1) !important;
+}
+
+.search-results-container .gsc-result:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(139, 69, 19, 0.08);
+}
+
+.search-results-container .gs-title {
+    font-family: 'Playfair Display', serif !important;
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+    font-size: 1.25rem !important;
+    line-height: 1.4 !important;
+}
+
+.search-results-container .gs-snippet {
+    font-family: 'Poppins', sans-serif !important;
+    color: var(--text-color) !important;
+    font-size: 1rem !important;
+    line-height: 1.6 !important;
+    margin: 0.5rem 0 !important;
+}
+
+.search-results-container .gsc-url-top {
+    font-family: 'Poppins', sans-serif !important;
+    color: var(--accent-color) !important;
+    font-size: 0.9rem !important;
+}
+
+.search-results-container .gsc-cursor-page {
+    padding: 8px 12px !important;
+    margin: 4px !important;
+    border-radius: 6px !important;
+    color: var(--primary-color) !important;
+    border: 1px solid rgba(139, 69, 19, 0.2) !important;
+    background: white !important;
+    transition: all 0.3s ease !important;
+}
+
+.search-results-container .gsc-cursor-page:hover,
+.search-results-container .gsc-cursor-current-page {
+    background: var(--primary-color) !important;
+    color: white !important;
+    border-color: var(--primary-color) !important;
+}
+
+.search-results-container .gsc-results .gsc-cursor-box {
+    margin: 2rem 0 1rem !important;
+    text-align: center !important;
+}
+
+/* Mobile Responsive Adjustments */
 @media (max-width: 768px) {
     .hero-title {
         font-size: 2.5rem;
@@ -630,5 +709,25 @@ body {
 
     .gsc-search-button-v2 {
         padding: 10px 20px !important;
+    }
+
+    .search-results-section {
+        padding: 2rem 0;
+    }
+
+    .search-results-container {
+        padding: 1rem;
+    }
+
+    .search-results-container .gsc-result {
+        padding: 1rem !important;
+    }
+
+    .search-results-container .gs-title {
+        font-size: 1.1rem !important;
+    }
+
+    .search-results-container .gs-snippet {
+        font-size: 0.9rem !important;
     }
 }
