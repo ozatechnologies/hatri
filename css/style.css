@@ -103,6 +103,25 @@ body {
 .about-section {
     padding: 5rem 0;
     background-color: var(--light-bg);
+    background-image: url('../images/traditional-pattern.svg');
+    background-repeat: repeat;
+    position: relative;
+}
+
+.about-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(253, 245, 230, 0.92), rgba(253, 245, 230, 0.96));
+    z-index: 1;
+}
+
+.about-section .container {
+    position: relative;
+    z-index: 2;
 }
 
 .section-title {
