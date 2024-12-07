@@ -100,6 +100,85 @@ body {
     margin-bottom: 2rem;
 }
 
+/* Hero Section Search Styles */
+.hero-content .search-container {
+    max-width: 100%;
+    background: rgba(255, 255, 255, 0.95);
+    padding: 1.5rem;
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s ease;
+}
+
+.hero-content .search-container:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Google Custom Search Overrides */
+.hero-content .gsc-control-cse {
+    border: none !important;
+    background: transparent !important;
+    padding: 0 !important;
+    font-family: 'Poppins', sans-serif !important;
+}
+
+.hero-content .gsc-search-button-v2 {
+    background-color: var(--primary-color) !important;
+    border-color: var(--primary-color) !important;
+    padding: 12px 24px !important;
+    border-radius: 8px !important;
+    margin-left: 10px !important;
+    transition: all 0.3s ease !important;
+}
+
+.hero-content .gsc-search-button-v2:hover {
+    background-color: var(--accent-color) !important;
+    border-color: var(--accent-color) !important;
+    transform: translateY(-1px) !important;
+}
+
+.hero-content .gsc-input-box {
+    border: 2px solid rgba(255, 255, 255, 0.3) !important;
+    border-radius: 8px !important;
+    padding: 5px !important;
+    background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.hero-content .gsc-input-box:focus-within {
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 3px rgba(139, 69, 19, 0.2) !important;
+}
+
+.hero-content .gsc-input {
+    padding: 8px 12px !important;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 1rem !important;
+    color: var(--text-color) !important;
+}
+
+.hero-content .gsib_a {
+    padding: 8px 12px !important;
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero-content .search-container {
+        padding: 1rem;
+        margin: 1rem 0;
+    }
+
+    .hero-content .gsc-search-button-v2 {
+        padding: 10px 20px !important;
+    }
+
+    .hero-content .gsc-input {
+        font-size: 0.9rem !important;
+    }
+}
+
 .about-section {
     padding: 5rem 0;
     background-color: var(--light-bg);
